@@ -1,0 +1,155 @@
+@import "/Funcionario/CSS/Fonts&Color.css";
+
+*{
+    padding: 0px;
+    margin: 0px;
+    text-decoration: none;
+    list-style: none;
+}
+/*----------------BACKGROUND----------------*/
+body{
+    background-image: linear-gradient(50deg, #27395B ,#2f3a4e);
+    overflow: hidden;
+}
+/*----------------TAB----------------*/
+.seta{
+    position:absolute;
+    z-index: +10;
+    left: 215px;
+    margin-top: 25%;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+    transform: rotate(180deg);
+}
+.circulo_seta{
+    height: 30px;
+    width: 30px;
+    background-color: #27395B;
+    margin-top: -25px;
+    margin-left: -5px;
+    border-radius: 100px;
+}
+.seta > i {
+    font-size: 20px;
+    color: #FF9900;
+}
+.Conteiner_Nav{
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    background-image: linear-gradient( 180deg,#38507D, #27395B) ;   
+    height: 100%; 
+    padding-right: 30px;
+    transition: all 0.5s ease-in-out;
+    overflow: hidden;
+}
+/*-------Logo-------*/
+.LogoName{
+    margin-left: 25px;
+    margin-top: 20px;
+    width: 220px;
+    transition: all 0.5s ease-in-out;
+}
+.LogoName > img {
+    width: 120px;
+}
+.LogoName > h4 {
+    font-family: 'Alata', sans-serif;
+    font-weight: lighter;
+    color: #FF9900;
+
+}
+/*-------Icons-------*/
+.Conteiner_Nav > ul{
+    margin-left: 25px;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    font-size: 15px;
+}
+.Conteiner_Nav > ul > li > a{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    color: #5977A5;
+    font-family: 'Prompt', sans-serif;
+}
+.Conteiner_Nav > ul > li > a > i{
+    font-size: 20px;
+}
+.Lista_Nome_Principal{
+    transition: all 0.5s ease-in-out;
+}
+
+
+.line_sobre{
+    width: 150px;
+    height: 2px;
+    background-color: #202E49;
+    transition: all 0.5s ease-in-out;
+
+}
+.Exit_Menu{
+    margin-top: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    width: 40px;
+    border-radius: 10px;
+    background-color: #546E9F;
+    transition: all 0.5s ease-in-out;
+
+}
+.Exit_Menu a {
+    font-size: 20px;
+    color: #FFFFFF
+}
+/*----------------Animação JavaScript----------------*/
+.Conteiner_Nav.active {
+    width: 45px;
+}
+.Conteiner_Nav.active .LogoName{
+    opacity: 0;
+    margin-left: -120px;
+}
+.Conteiner_Nav.active .line_sobre{
+    width: 20px;
+}
+.Conteiner_Nav.active .Exit_Menu{
+    margin-left: -10px;
+}
+.Conteiner_Nav.active .Lista_Nome_Principal{
+    opacity: 0;
+}
+.Conteiner_Nav.active .Lista_Icons.active{
+    padding-right: 100px;
+}
+
+.seta.active{
+    left: 65px;
+    transform: rotate(0deg);
+}
+/*-------Main & Header-------*/
+
+header {
+    transition: all 0.5s ease-in-out;
+    margin-left: 280px;
+    padding-top: 30px;
+    padding-bottom: 25px;
+}
+header.active {
+    margin-left: 120px;
+}
+main {
+    transition: all 0.5s ease-in-out;
+    margin-left: 280px;
+    padding-top: 30px;
+}
+main.active {
+    margin-left: 120px;
+}
