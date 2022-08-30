@@ -1,15 +1,11 @@
-create schema SGC;
-use SGC;
+create schema marcos;
+use marcos;
 
 create table cliente (
 	id_cliente integer auto_increment primary key, 
 	nome integer not null, 
 	matricula integer not null,  
 	cpf_cliente integer unique
-); 
-
-create table predio ( 
-	id_predio integer auto_increment primary key
 ); 
 
 create table funcionario ( 
@@ -20,18 +16,24 @@ create table funcionario (
 	tipo_func varchar(55) not null
 ); 
 
-create table sala ( 
-	id_sala integer auto_increment primary key,  
-	id_predio integer,
-    foreign key(id_predio) references predio(id_predio)
-); 
-
 create table chave ( 
 	id_chave integer auto_increment primary key,  
 	situacao integer not null,  
 	id_sala integer not null,
     foreign key(id_sala) references sala(id_sala)
 ); 
+
+create table predio ( 
+	id_predio integer auto_increment primary key
+); 
+
+create table sala ( 
+	id_sala integer auto_increment primary key,  
+	id_predio integer,
+    foreign key(id_predio) references predio(id_predio)
+); 
+
+
 
 create table agendar (
 	id_chave integer,
