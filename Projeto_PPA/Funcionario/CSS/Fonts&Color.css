@@ -11,8 +11,10 @@
 */
 @import url('https://fonts.googleapis.com/css2?family=Alata&display=swap');
 /*font-family: 'Alata', sans-serif;*/
+@import url('https://fonts.googleapis.com/css2?family=Manrope&display=swap');
+/*font-family: 'Manrope', sans-serif;*/
+
+@import url('https://fonts.googleapis.com/css2?family=Armata&display=swap');
+/*font-family: 'Armata', sans-serif;*/
 
 /*------------Color------------*/
-:root {
-    --background-color-bold: linear-gradient(50deg, #27395B ,#2f3a4e);
-}

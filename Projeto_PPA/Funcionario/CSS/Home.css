@@ -1,3 +1,7 @@
+body{
+    filter: blur(0px);
+}
+
 /*-----------Titulo/Pesquisa---------------*/
 .nome_user_header > h4{
     font-size: 30px;
@@ -20,6 +24,9 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    position: relative;
+    left: 30%;
+    bottom: 40%;
 }
 .pesquisa > input {
     height: 30px;
@@ -28,6 +35,7 @@
     border: none;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
     margin-right: 10px;
+    padding: 10px;
 
 }
 #seach_1_icon {
@@ -91,33 +99,53 @@
     align-items: center;
     gap: 10px;
 }
-.Container_Predio > a > h4 {
+.Container_Predio_infor {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
     color: #FFC700;
     font-family: 'Josefin Sans', sans-serif;
 }
 .Container_Predio > a > img {
     width: 50px;
 }
+.line_predios_link{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
 /*---------------------Adicionar Predio--------------------*/
 .Container_Predio_Adicionar{
+    display: none;
+    width: 100px;
+    height: 100px;
     margin-top: 20px;
     background-color: #2D4065;
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 100px;
-    height: 100px;
-    border-radius: 10px;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
     transition: all 0.3s ease-in-out;
+    border-radius: 10px;
+
 }
-.Container_Predio_Adicionar > a {
+.Container_Predio_Adicionar > button {
+    cursor: pointer;
+    width: 100px;
+    height: 100px;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: white;
+    background: none;
+    border: 0px;
     font-size: 50px;
+    border-radius: 10px;
+    transition: all 0.2s ease-in-out;
+    color: white;
+}
+.Container_Predio_Adicionar > button > i{
     transform: rotate(45deg);
 }
 /*---------------------Hover Predio--------------------*/
@@ -125,9 +153,9 @@
     height: 110px;
     width: 110px;
 }
-.Container_Predio_Adicionar:hover{
-    height: 120px;
-    width: 120px;
+.button_Adicionar_Predio:hover{
+    color: rgb(218, 170, 0);
+    background: white;
 }
 
 /*------------------Chaves---------------------*/
@@ -141,7 +169,7 @@
 }
 /*------------------Prédio 1 ---------------------*/
 .Container_Predios1_Chave{
-    margin-top: 20px;
+    margin-top: 10px;
 }
 .informacao_predio{
     display: flex;
@@ -164,11 +192,16 @@
     height: 2px;
     background-color: #5C81CA;
 }
-.SideBar.active .informacao_predio_linha2 {
+.informacao_predio_linha2{
+    width: 800px;
+    height: 2px;
+    background-color: #5C81CA;
     transition: all 0.5s ease-in-out;
-    width: 2000px;
 }
-/*---------------------------Prédio 1 ---------------------------*/
+main.active .informacao_predio_linha2 {
+    width: 1000px;
+}
+/*--------------------------- Prédio 1 ---------------------------*/
 .caixa-chave {
     background-color: #2d4065;
     box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.25);
@@ -189,6 +222,7 @@
     gap: 10px;
     margin: 10px;
   }
+
   .caixa-chave > section > p {
     color: white;
     font-family: 'Comfortaa';
@@ -252,4 +286,142 @@
     font-size: 30px;
     line-height: 38px;
   }
-  
+/*--------------------------- Popup ---------------------------*/
+.PopupAdicionarPredio{
+    top: 250px;
+    left: 550px;
+    position: absolute;
+    background-color: #2D4065;
+    width: 350px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    opacity: 0;
+}
+.ConteinarPopupAdicionarPredio{
+    display: none;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+
+}
+.ConteinarPopupAdicionarPredio > img {
+    width: 70px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.Lina_Popup_Adicionar{
+    height: 150px;
+    width: 1px;
+    background-color: #5C81CA;
+}
+.InformacoesPopupAdicionarPredios{
+    margin-left: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.InformoesPopupPredios_Bloco1{
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    gap: 100px;
+    font-family: 'Space Grotesk';
+    font-size: 20px;
+    color: white;
+}
+/*-------------*/
+.Form_Cadastro_Predio{
+    display:flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.Form_Cadastro_Predio_Bloco1{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+}
+.Form_Cadastro_Predio_Bloco1 > h4 {
+    font-family: 'Space Grotesk';
+    font-size: 20px;
+    color: white;    
+}
+.Form_Cadastro_Predio_Bloco1 > input {
+    outline: none;
+    font-family: 'Space Grotesk';
+    font-size: 15px;
+    width: 120px;     
+}
+.Form_Cadastro_Predio_Bloco2{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.InformoesPopupPredios_Bloco2{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    font-family: 'Space Grotesk';
+    font-size: 20px;
+    color: white;
+}
+
+.IdNovoPredio {
+    height: 30px;
+    border-radius: 10px;
+    border-style: none;
+    align-items: center;
+    padding-left: 3px;
+    font-family: 'Chivo';
+    
+}
+.button_Adicionar_Predio_Fecha{
+    height: 20px;
+    width: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    color: #80FF7D;
+    border-radius: 10px;
+    border: 2px solid #80FF7D;
+    transition: all 0.2s ease-in-out;
+
+}
+.button_Adicionar_Predio_Fecha:hover{
+    color: #ff2f2f;
+    border: 3px solid #ff2f2f;
+    transition: all 0.2s ease-in-out;
+
+
+
+}
+.button_Adicionar_Predio_Fecha > i {
+    font-size: 20px;
+}
+.InformoesPopupPredios_Bloco3{
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+.button_salvar_predio_novo{
+    width: 100px;
+    height: 30px;
+    border-radius: 10px;
+    border-style: none;
+    background-image: linear-gradient(270deg, #6d43da 0%, #5725d3 100%);
+    font-family: 'Space Grotesk';
+    color: white;
+    font-size: 15px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25);
+    transition: all 0.1s ease-in-out;
+}
+.button_salvar_predio_novo:hover{
+    color: rgb(218, 170, 0);    
+}
+
+@media (max-width: 1366px){
+}
